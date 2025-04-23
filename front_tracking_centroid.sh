@@ -58,7 +58,7 @@ F=F850
 zeta_eq="_CURL{${stencil_pts},${stencil_deg}}($u,$v)"
 T_advection_eq="_PROD(_VECDOTGRADT{${stencil_pts},${stencil_deg}}($u,$v,$t),-1)"
 T_gradmag_eq="_GRADMAG{${stencil_pts},${stencil_deg}}($t)"
-F_eq="_PROD(_DIV(_PROD($zeta,$T_gradmag),_PROD(0.0001,0.0000045)),_SIGN(_F))"
+F_eq="_PROD(_DIV(_PROD($zeta_eq,$T_gradmag_eq),_PROD(0.0001,0.0000045)),_SIGN(_F))"
 
 #
 ## loading environments and nco
